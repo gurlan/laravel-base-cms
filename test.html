@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    (function (){
+        function countdown(id,end,start){
+            var startDate =start ? start: new Date();
+            var endDate = new Date(end);
+
+
+            var time = (endDate - startDate)/1000;
+
+        /*    if(time < 0){
+                if(config.callback){
+                    config.callback();
+                }
+                return;
+            }*/
+            var day = parseInt(time/86400, 10);
+            var hour = parseInt(time%86400/60/60, 10);
+            var minute = parseInt(time%86400%3600/60, 10);
+            var second = parseInt(time%86400%3600%60, 10);
+            var mayday = day > 0?day+'天':'';
+            var mayhour = hour<10?'0'+hour:hour;
+            var mayminute = minute<10?'0'+minute : minute;
+            var maysecond = second<10?'0'+second : second;
+            setTimeout(function (){
+                document.getElementById(id).innerHTML = mayday+mayhour+':'+mayminute+':'+maysecond;
+                countdown(id,end,start);
+            }, 1000);
+        }
+
+        window.countdown = countdown;
+    })();
+    // 引用倒计时
+    countdown('countdown','2019/6/6 19:19:00');
+    countdown('countdown1','2020/6/6 23:19:01');
+</script>
+<div id="countdown">
+</div>
+<div id="countdown1">
+</div>
+</body>
+</html>

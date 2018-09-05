@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6dd5e682-798b-4c73-a1aa-b49f7acae333" name="dram" url="http://47.95.217.202">
+        <fileTransfer host="47.95.217.202" port="21" password="dfd2dfc9df92dfe9dff9dfe7dffadfc2dfc3dfeedff8dff8dfc2dfcedfebdf99" username="dream">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
